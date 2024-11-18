@@ -3,6 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
  import {router} from "expo-router";
  import Swiper from "react-native-swiper";
  import { useRef, useState } from "react";
+import { onboarding } from "@/constants";
 
  const welcome = () => {
   const swiperRef = useRef<Swiper>(null);
@@ -23,7 +24,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
           activeDot ={<View className="w-[32px] h-[4px] mx-1 bg-[#008080] rounded-full"/>}
           onIndexChanged={(index)=>setActiveIndex(index)}
        >    
-          
+       {onboarding.map((item) => (
+            <View>
+              <Text>{item.title}</Text>
+            </View>
+          ))}
           
         </Swiper>
     </SafeAreaView>
