@@ -8,7 +8,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
   const swiperRef = useRef<Swiper>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <SafeAreaView className="flex h-full items-center justify-between bg-white">
+    <SafeAreaView className="flex h-full items-center justify-between bg-white" >
         <TouchableOpacity onPress={() =>{
           router.replace("/(auth)/sign-up");
         }}
